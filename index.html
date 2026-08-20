@@ -5,43 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MineCalc</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <div class="wbcont">
+    <!-- input -->
+    <div class="headings">
         <header>
             <h1>Minecraft Material Calculator</h1>
             <p>Search or Select Items & Get Raw Material Count</p>
         </header>
     </div>
 
-    <div class="field">
-        <label for="Search">Search</label>
+    <div class="input">
+        <label for="item-search">Search</label>
         <div class="search-row">
             <input type="text" id="item-search" placeholder="Type To Search Items...">
-            <button type="button" id="search-btn" class="search-btn">Search
-            </button>
-
+            <button type="button" id="search-btn" class="search-btn">Search</button>
         </div>
-
     </div>
 
     <form id="additem-form">
         <div class="field">
             <label for="item-select">Select Item</label><br>
             <select id="item-select" required size="7"></select>
-
         </div>
 
+        <label for="item-qnt"> Select Quantity</label>
+        <input type="number" id="item-qnt" value="1" min="1" max="1024">
 
         <div>
-            <label for="item-qnt">Select Quantity</label>
-            <input type="number" id="item-qnt" value="1" min="1" max="1024> 
-
-        </div> 
-    
-        <button type=" submit" class="btn-primary">Calculate</button>
+            <button type="submit" class="btn-primary">Calculate</button>
+        </div>
     </form>
+
+    <!-- output -->
+    <section class="card">
+        <h2>
+            Required Materials
+        </h2>
+    </section>
+
 </body>
 
 </html>

@@ -1,0 +1,199 @@
+/* custom colors for variables */
+:root {
+  --bg-color: #121316;
+  --card-bg: #1c1e24;
+  --card-border: #3a3f4d;
+  --text-main: #f0f2f5;
+  --text-muted: #9aa0a6;
+  --accent-green: #38a169;
+  --accent-green-hover: #2f855a;
+  --accent-amber: #d69e2e;
+  --input-bg: #aaaaaa;
+  --item-bg: #aaaaaa;
+  /* font */
+  --font-family: 'Press Start 2P', 'Courier New', monospace;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* minecrafty background */
+body {
+  font-family: var(--font-family);
+  max-width: 400px;
+  background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/23838.jpg');
+  background-size: cover;
+  padding: 24px 16px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-position: center;
+  gap: 24px;
+  color: var(--text-main);
+  background-attachment: fixed;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  /* makes pixel text non blurry*/
+}
+
+/* container layout */
+form,
+.card,
+.headings,
+.input {
+  border: 3px solid var(--card-border);
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: 6px;
+}
+
+/* subtitles and minor labels */
+header p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-top: 8px;
+}
+
+h1 {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: block;
+  letter-spacing: 0.5px;
+}
+
+/* putting search bar and button side by side */
+.search-row {
+  gap: 8px;
+  display: flex;
+}
+
+/* boxes where u type */
+input,
+select {
+  padding: 10px 12px;
+  background-color: var(--input-bg);
+  width: 100%;
+  font-size: 0.95rem;
+  color: #111;
+  border-radius: 4px;
+  outline: none;
+  font-family: inherit;
+  margin-bottom: 12px;
+  border: 2px solid;
+  /* weird shadows to make it look 3d boxy */
+  border-color: #101114 #555968 #555968 #101114;
+}
+
+/* glow green when u click it */
+input:focus,
+select:focus {
+  border-color: var(--accent-green);
+}
+
+select {
+  color: #111;
+  padding: 6px;
+  margin-bottom: 0;
+}
+
+/* green calculate button */
+.btn-primary {
+  padding: 12px 16px;
+  background-color: var(--accent-green);
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  margin-top: 16px;
+  font-family: inherit;
+  border: 2px solid;
+  border-color: #68d391 #22543d #22543d #68d391;
+  border-radius: 4px;
+}
+
+/* light green when hovering your cursor */
+.btn-primary:hover {
+  background-color: var(--accent-green-hover);
+}
+
+/* search button */
+.search-btn {
+  height: 42px;
+  white-space: nowrap;
+  background-color: var(--item-bg);
+  padding: 0 16px;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
+  width: auto;
+  border: 2px solid;
+  border-color: #4a4f60 #1a1c23 #1a1c23 #4a4f60;
+  border-radius: 4px;
+}
+
+/* block layout for output list */
+.materials-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* inventory display */
+.material-card {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  background: var(--item-bg);
+  padding: 12px 16px;
+  color: #111;
+  border-radius: 4px;
+  /* manual borders for cool shadow effects */
+  border-left: 4px solid var(--accent-green);
+  border-top: 1px solid #3a3f4d;
+  border-right: 1px solid #1a1c23;
+  border-bottom: 1px solid #1a1c23;
+}
+
+.material-title {
+  font-weight: 600;
+}
+
+.material-counts {
+  text-align: right;
+}
+
+.material-total {
+  font-weight: 700;
+  color: #b7791f;
+  font-size: 1.1rem;
+}
+
+/* small subtext for stacks */
+.material-stacks {
+  color: #444;
+  font-size: 0.8rem;
+}
